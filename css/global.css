@@ -9,11 +9,21 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  background-color: #C5CFEF;
+  color: #363709;
+  line-height: 1.1;
+  text-align: left;
+  font-size: 3.5rem;
+  font-family: Comfortaa;
+}
+
 
 /* Base CSS Grid for main page  */
 .container1 {
-  font-size: 2.5rem;
-  color: red;
+  /* font-size: 2.5rem; */
+  /* color: red; */
   min-height: 300px;
   width: 100%;
   background: LightGray;
@@ -21,7 +31,7 @@ html {
   /* flexible sizes ...use auto or fr units?? */
   grid-template-rows: 150px auto 100px;
   grid-template-columns: 400px auto;
-  grid-gap: 10px;
+  /* grid-gap: 10px; */
   /* move to separate css later */
   grid-template-areas:
     "hd hd"
@@ -33,27 +43,27 @@ html {
   padding: 10px;
   font-size: inherit;
   /* for seeing css grid elements' placement */
-  border: solid 2px red;
+  /* border: solid 2px red; */
 }
 
 #header {
-  background: LightSkyBlue;
+  background-color: #AAB3CF;
   grid-area: hd;
 }
 
 #navigation {
-  background: LightSalmon;
+  background-color: #677BB9;
   grid-area: nav;
   min-height: 300px;
 }
 
 #content {
-  background: LightGreen;
+  background: inherit;
   grid-area: ct;
 }
 
 #footer {
-  background: LightSkyBlue;
+  background-color: #AAB3CF;
   grid-area: ft;
 }
 
@@ -65,34 +75,41 @@ html {
 
 .container2 {
   font-size: inherit;
-  color: red;
+  /* color: red; */
   /* min-height: 300px; */
   width: 100%;
   background: inherit;
   display: grid;
 
-  grid-template-rows: 300px 1fr 1fr;
+  grid-template-rows: 300px auto 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
   /* move to separate css later */
   grid-template-areas:
     "intro intro"
+    "ch ch"
     "c1 c2"
     "c3 c4";
 }
 
 #intro {
-  background: Orange;
+  background: inherit;
   grid-area: intro;
   /* for seeing css grid elements' placement */
-  border: solid 2px green;
+  /* border: solid 2px green; */
+  padding: inherit;
+}
+
+#cardheader {
+  background-color: #AAB3CF;
+  grid-area: ch;
   padding: inherit;
 }
 
 .card {
   min-height: 200px;
   /* for seeing css grid elements' placement */
-  border: solid 2px green;
+  /* border: solid 2px green; */
   padding: inherit;
 
 }
