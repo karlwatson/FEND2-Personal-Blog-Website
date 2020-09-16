@@ -5,6 +5,10 @@ html {
   font-size: 8px;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 
 /* Base CSS Grid for main page  */
 .container1 {
@@ -82,12 +86,15 @@ html {
   grid-area: intro;
   /* for seeing css grid elements' placement */
   border: solid 2px green;
+  padding: inherit;
 }
 
 .card {
   min-height: 200px;
   /* for seeing css grid elements' placement */
   border: solid 2px green;
+  padding: inherit;
+
 }
 
 #card1 {
