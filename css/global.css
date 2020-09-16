@@ -1,1 +1,54 @@
 /* Global stylesheet with separate imports for page-specific CSS and for Media Queries */
+
+/* Global font sizes, pages will use rem for sizes */
+html {
+  font-size: 8px;
+}
+
+
+/* Base CSS Grid for main page  */
+.container {
+  font-size: 2.5rem;
+  color: red;
+  min-height: 300px;
+  width: 100%;
+  background: LightGray;
+  display: grid;
+  /* flexible sizes ...use auto or fr units?? */
+  grid-template-columns: 400px 1fr;
+  grid-template-rows: 150px auto 100px;
+  grid-gap: 10px;
+  /* move to separate css later */
+  grid-template-areas:
+    "hd hd"
+    "nav ct"
+    "ft ft";
+}
+
+.area {
+  padding: 10px;
+  font-size: inherit;
+  /* // for seeing css grid elements' placement */
+  border: solid 2px red;
+}
+
+#header {
+  background: LightSkyBlue;
+  grid-area: hd;
+}
+
+#navigation {
+  background: LightSalmon;
+  grid-area: nav;
+  min-height: 300px;
+}
+
+#content {
+  background: LightGreen;
+  grid-area: ct;
+}
+
+#footer {
+  background: LightSkyBlue;
+  grid-area: ft;
+}
