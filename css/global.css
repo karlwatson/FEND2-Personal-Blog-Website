@@ -1,5 +1,13 @@
 /* Global stylesheet with separate imports for page-specific CSS and for Media Queries */
 
+:root {
+  --grey-darker: #AAB3CF;
+  --grey-lighter: #C5CFEF;
+  --grey-blue: #677BB9;
+  --grey-lightest: #D0DAFB;
+}
+
+
 /* Global font sizes, pages will use rem for sizes */
 html {
   font-size: 8px;
@@ -11,18 +19,28 @@ html {
 
 body {
   margin: 0;
-  background-color: #C5CFEF;
+  background-color: var(--grey-lighter, lightgrey);
   color: #363709;
-  line-height: 1.1;
+  line-height: 1.2;
   text-align: left;
-  font-size: 3.5rem;
+  /* font-size: 5rem; */
   font-family: Comfortaa;
+}
+
+
+h4 {
+  font-size: 3rem;
+  margin: 2px;
+}
+p {
+  font-size: 2rem;
 }
 
 
 /* Base CSS Grid for main page  */
 .container1 {
-  /* font-size: 2.5rem; */
+  font-size: 3.5rem;
+  line-height: 1;
   /* color: red; */
   min-height: 300px;
   width: 100%;
@@ -47,12 +65,13 @@ body {
 }
 
 #header {
-  background-color: #AAB3CF;
+  background-color: var(--grey-darker, lightslategrey);
   grid-area: hd;
 }
 
 #navigation {
-  background-color: #677BB9;
+  background-color: var(--grey-blue, lightslategrey);
+  /* background-color: #677BB9; */
   grid-area: nav;
   min-height: 300px;
 }
@@ -63,7 +82,7 @@ body {
 }
 
 #footer {
-  background-color: #AAB3CF;
+  background-color: var(--grey-darker, lightslategrey);
   grid-area: ft;
 }
 
@@ -101,35 +120,48 @@ body {
 }
 
 #cardheader {
-  background-color: #AAB3CF;
+  text-align: center;
+  background-color: var(--grey-darker, lightslategrey);
+  /* background-color: #AAB3CF; */
   grid-area: ch;
   padding: inherit;
+  padding: 10px;
+  border-radius: 8px;
+
 }
 
 .card {
+  background-color: var(--grey-lightest, ghostwhite);
   min-height: 200px;
   /* for seeing css grid elements' placement */
   /* border: solid 2px green; */
-  padding: inherit;
+  padding: 15px;
+  border-radius: 15px;
 
 }
 
+.card-image {
+  width: 100%;
+  border-radius: 8px;
+  height: 300px;
+  object-fit: cover;
+  /* opacity ... change to 1 on hover */
+  opacity: 0.75;
+}
+
+
 #card1 {
-  background: Orange;
   grid-area: c1;
 }
 
 #card2 {
-  background: Orange;
   grid-area: c2;
 }
 
 #card3 {
-  background: Orange;
   grid-area: c3;
 }
 
 #card4 {
-  background: Orange;
   grid-area: c4;
 }
