@@ -245,7 +245,7 @@ p {
   background: inherit;
   display: grid;
 
-  grid-template-rows: auto auto 1fr 1fr;
+  grid-template-rows: auto§ auto 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   grid-gap: 12px;
   /* move to separate css later */
