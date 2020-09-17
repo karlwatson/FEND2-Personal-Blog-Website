@@ -52,7 +52,7 @@ p {
 
 /* Header formatting */
 
-#header {
+.header {
   display: flex;
   /* flex-direction: row; */
   flex-flow: row nowrap;
@@ -61,7 +61,7 @@ p {
   margin-top: 0;
 }
 
-#animoji {
+.animoji {
   max-height: 80%;
   border-radius: 40%;
   margin: 5px;
@@ -69,7 +69,7 @@ p {
 
 /* animoji hover state to shake */
 /* adapted from https://www.w3schools.com/howto/howto_css_shake_image.asp */
-#animoji:hover {
+.animoji:hover {
   /* Start the shake animation*/
   animation: shake 0.8s;
   /* animation-iteration-count: infinite; */
@@ -88,18 +88,18 @@ p {
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
-#header-text {
+.header-text {
   /* display: flex; */
   /* border: solid 2px red; */
   margin: 5px 20px 5px;
   padding: 10px;
 }
 
-#header-text > h1 {
+.header-text > h1 {
   font-size: 8rem;
 }
 
-#header-text > h2 {
+.header-text > h2 {
   font-size: 3.5rem;
 }
 
@@ -107,7 +107,7 @@ p {
 
 /* Navigation sidebar formatting */
 
-#navigation {
+.navigation {
   padding-left: 10px;
   display: flex;
   /* flex-direction: row; */
@@ -119,11 +119,11 @@ p {
   color: var(--grey-lighter, lightgrey);
 }
 
-#navigation h3 {
+.navigation h3 {
   padding: 6px;
 }
 
-#navlinks {
+.navlinks {
   padding: 10px;
   display: flex;
   flex-flow: column nowrap;
@@ -132,20 +132,20 @@ p {
   font-size: inherit;
 }
 
-#navlinks a {
+.navlinks a {
   padding-top: 10px;
   font-size: 2.5rem;
   color: var(--grey-darker, lightslategrey);
 }
 
-#navlinks a:hover {
+.navlinks a:hover {
   color: var(--hover, cyan);
   font-style: italic;
   /* color: #1FF8F8; */
 }
 
 
-#navsocial {
+.navsocial {
   padding-top: 50px;
   padding-bottom: 20px;
   display: flex;
@@ -155,16 +155,16 @@ p {
   font-size: inherit;
 }
 
-#navsocial h4 {
+.navsocial h4 {
   margin-bottom: 10px;
 }
 
-#navsocial img {
+.navsocial img {
   width: 90px;
   padding:10px;
 }
 
-#navsocial a:hover {
+.navsocial a:hover {
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 8px 8px rgba(0,0,0,0.23);
   border-radius: 35%;
   background-color: var(--grey-lighter, lightgrey);
@@ -206,29 +206,29 @@ p {
   /* border: solid 2px red; */
 }
 
-#header {
+.header {
   background-color: var(--grey-darker, lightslategrey);
   grid-area: hd;
 }
 
-#navigation {
+.navigation {
   background-color: var(--grey-blue, lightslategrey);
   /* background-color: #677BB9; */
   grid-area: nav;
   min-height: 300px;
 }
 
-#content {
+.content {
   background: inherit;
   grid-area: ct;
 }
 
-#footer {
+.footer {
   background-color: var(--grey-darker, lightslategrey);
   grid-area: ft;
 }
 
-#footer p {
+.footer p {
   font-size: 1.5rem;
   text-decoration: underline;
 }
@@ -396,10 +396,16 @@ p {
 
 #blog-author {
   grid-area: bl-a;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
-
+#bl-header-group {
+  background-color: var(--grey-lightest, ghostwhite);
+  padding: 5px;
+  border-radius: 8px;
+  /* border: 3px solid red; */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.19), 0 1px 1px rgba(0,0,0,0.23);
+}
 
 
 
@@ -436,10 +442,37 @@ p {
   height:auto;
   display: block;
   margin: 0 auto 15px;
+  border-radius: 20px;
 }
 
 
-/* a:hover {
+#bl-container a:hover {
   color: var(--hover, cyan);
   font-style: italic;
-} */
+}
+
+
+/* Author section */
+
+#blog-author {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  background-color: var(--grey-lightest, ghostwhite);
+  padding: 5px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.19), 0 1px 1px rgba(0,0,0,0.23);
+}
+
+
+
+#blog-author-name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#bl-bio-animoji {
+  width:50px;
+  height:auto;
+}

@@ -17,19 +17,19 @@
     <div id="bl-container" class="container1">
 
     <!-- Header Element -->
-      <header class= "area" id="header">
-          <img id="animoji" src="img\animoji.jpg" alt="emoji face">
-        <div id="header-text">
+      <header class= "area header" id="bl-header">
+          <img class="animoji" id="bl-animoji" src="img\animoji.jpg" alt="emoji face">
+        <div class="header-text" id="bl-header-text">
           <h1>My Blog!</h1>
           <h2>Personal Blog Website Udacity project</h2>
         </div>
       </header>
 
     <!-- Navigation sidebar -->
-      <div class= "area" id="navigation">
+      <div class= "area navigation" id="bl-navigation">
         <h3>Navigation</h3>
         <!-- Blank links -->
-        <div id="navlinks">
+        <div class="navlinks" id="bl-navlinks">
           <a href="main.html" target="_top">Back to main page</a>
           <a href="#" target="_top">Dead link 1</a>
           <a href="#" target="_top">Dead link 2</a>
@@ -37,7 +37,7 @@
           <a href="#" target="_top">Dead link 4</a>
         </div>
         <!-- Social links -->
-        <div id="navsocial">
+        <div class="navsocial" id="bl-navsocial">
           <h4>Connect with me!</h4>
           <!-- github -->
           <a href="https://github.com/karlwatson" target="_top">
@@ -62,9 +62,10 @@
         <!-- Main content for blog -->
         <section id="blog-content">
 
-          <h3 id="title">Leonardo da Vinci</h3>
-          <h4 id="subtitle">The Artist and Genius Inventor</h4>
-
+          <div id="bl-header-group">
+            <h3 id="bl-title">Leonardo da Vinci</h3>
+            <h4 id="bl-subtitle">The Artist and Genius Inventor</h4>
+          </div>
           <figure id="bl-img-div">
             <img id="bl-image" src="https://images.unsplash.com/photo-1423742774270-6884aac775fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80" alt="Leonardo da Vinci painting of the Mona Lisa">
             <figcaption id="bl-img-caption">
@@ -104,12 +105,17 @@
 
         <!-- Author info -->
         <section id="blog-author">
-          <p>Author info</p>
+          <div id="blog-author-name">
+            <img class="animoji" id="bl-bio-animoji" src="img\animoji.jpg" alt="emoji face">
+            <p><b>Author</b>: Karl Watson</p>
+          </div>
+          <p>Karl is currently study on the Udacity FEND course and has also started FreeCodeCamp</p>
+
         </section>
 
       </div>
 
-      <footer class= "area" id="footer">
+      <footer class= "area footer" id="bl-footer">
         <p>© Karl Watson 2020</p>
       </footer>
 
