@@ -11,7 +11,9 @@
   /* Lighter colour for 'card' elements */
   --grey-lightest: #D0DAFB;
   /* Hover colour for links */
-  --hover: #1FF8F8;
+  --hover: #10ECEC;
+  /* Font colour default */
+  --font: #363709;
 }
 
 
@@ -28,7 +30,8 @@ html {
 body {
   margin: 0;
   background-color: var(--grey-lighter, lightgrey);
-  color: #363709;
+  color: var(--font, black);
+  /* color: #363709; */
   line-height: 1.2;
   text-align: left;
   /* font-size: 5rem; */
@@ -42,7 +45,7 @@ h4, h3 {
 }
 
 p {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 
@@ -55,7 +58,7 @@ p {
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 12px;
+  margin-top: 0;
 }
 
 #animoji {
@@ -165,7 +168,8 @@ p {
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 8px 8px rgba(0,0,0,0.23);
   border-radius: 35%;
   background-color: var(--grey-lighter, lightgrey);
-  color: #1FF8F8;
+  color: var(--hover, cyan);
+  /* color: #1FF8F8; */
 }
 
 
@@ -241,7 +245,7 @@ p {
   background: inherit;
   display: grid;
 
-  grid-template-rows: 200px auto 1fr 1fr;
+  grid-template-rows: auto auto 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   grid-gap: 12px;
   /* move to separate css later */
@@ -263,6 +267,10 @@ p {
   /* border: solid 2px green; */
   padding: 6px;
   font-size: inherit;
+}
+
+#intro > p {
+  font-size: 2.5rem;
 }
 
 #intro a:hover {
@@ -298,6 +306,23 @@ p {
   /* card zoom effect */
   transition: 0.4s;
   font-size: inherit;
+}
+
+.card button {
+  background-color: var(--grey-lightest, ghostwhite);
+  color: var(--font, black);
+  /* color: var(--grey-darker, lightslategrey); */
+  font-size: 2.5rem;
+  border: 3px solid var(--grey-blue, lightslategrey);
+  border-radius: 6px;
+  margin: 2px 0px 10px 0px;
+  margin-left: 0;
+  padding: 5px;
+}
+
+.card button:hover {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.19), 0 1px 1px rgba(0,0,0,0.23);
+  border: 3px solid var(--hover, cyan);
 }
 
 .card-image {
