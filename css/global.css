@@ -10,6 +10,8 @@
   --grey-blue: #677BB9;
   /* Lighter colour for 'card' elements */
   --grey-lightest: #D0DAFB;
+  /* Hover colour for links */
+  --hover: #1FF8F8;
 }
 
 
@@ -40,7 +42,7 @@ h4, h3 {
 }
 
 p {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 
@@ -53,12 +55,34 @@ p {
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
+  margin-top: 12px;
 }
 
 #animoji {
   max-height: 80%;
   border-radius: 40%;
   margin: 5px;
+}
+
+/* animoji hover state to shake */
+/* adapted from https://www.w3schools.com/howto/howto_css_shake_image.asp */
+#animoji:hover {
+  /* Start the shake animation*/
+  animation: shake 0.8s;
+  /* animation-iteration-count: infinite; */
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
 #header-text {
@@ -68,12 +92,12 @@ p {
   padding: 10px;
 }
 
-.header-text > h1 {
-  font-size: 3rem;
+#header-text > h1 {
+  font-size: 8rem;
 }
 
-.header-text > h2 {
-  font-size: 1.5rem;
+#header-text > h2 {
+  font-size: 3.5rem;
 }
 
 
@@ -92,6 +116,10 @@ p {
   color: var(--grey-lighter, lightgrey);
 }
 
+#navigation h3 {
+  padding: 6px;
+}
+
 #navlinks {
   padding: 10px;
   display: flex;
@@ -108,7 +136,9 @@ p {
 }
 
 #navlinks a:hover {
-  color: #1FF8F8;
+  color: var(--hover, cyan);
+  font-style: italic;
+  /* color: #1FF8F8; */
 }
 
 
@@ -122,6 +152,10 @@ p {
   font-size: inherit;
 }
 
+#navsocial h4 {
+  margin-bottom: 10px;
+}
+
 #navsocial img {
   width: 90px;
   padding:10px;
@@ -133,6 +167,7 @@ p {
   background-color: var(--grey-lighter, lightgrey);
   color: #1FF8F8;
 }
+
 
 
 
@@ -189,6 +224,11 @@ p {
   grid-area: ft;
 }
 
+#footer p {
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+
 
 
 /* CSS for Grid Subdivision for content / cards */
@@ -201,7 +241,7 @@ p {
   background: inherit;
   display: grid;
 
-  grid-template-rows: 300px auto 1fr 1fr;
+  grid-template-rows: 200px auto 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   grid-gap: 12px;
   /* move to separate css later */
@@ -212,24 +252,34 @@ p {
     "c3 c4";
 }
 
+
+
+/* Content  formatting */
+
 #intro {
   background: inherit;
   grid-area: intro;
   /* for seeing css grid elements' placement */
   /* border: solid 2px green; */
-  padding: inherit;
+  padding: 6px;
+  font-size: inherit;
+}
+
+#intro a:hover {
+  color: var(--hover, cyan);
+  font-style: italic;
 }
 
 #cardheader {
   text-align: center;
-  background-color: var(--grey-darker, lightslategrey);
+  background-color: var(--grey-lightest, ghostwhite);
   /* background-color: #AAB3CF; */
   grid-area: ch;
   padding: inherit;
   padding: 10px;
+  margin-bottom: 10px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.19), 0 1px 1px rgba(0,0,0,0.23);
-
 }
 
 
@@ -247,6 +297,7 @@ p {
   box-shadow: 0 2px 4px rgba(0,0,0,0.19), 0 1px 1px rgba(0,0,0,0.23);
   /* card zoom effect */
   transition: 0.4s;
+  font-size: inherit;
 }
 
 .card-image {
