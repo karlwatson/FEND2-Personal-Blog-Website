@@ -6,7 +6,7 @@
   --grey-darker: #AAB3CF;
   /* Lighter colour for main content */
   --grey-lighter: #C5CFEF;
-  /* Sidebar colour  */
+  /* Sidebar / nav colour  */
   --grey-blue: #677BB9;
   /* Lighter colour for 'card' elements */
   --grey-lightest: #D0DAFB;
@@ -34,27 +34,112 @@ body {
 }
 
 
-h4 {
+h4, h3 {
   font-size: 3rem;
   margin: 2px;
 }
+
 p {
   font-size: 2rem;
 }
 
 
-.animoji {
-  max-height: 90%;
-  border-radius: 50%;
 
+/* Header formatting */
+
+#header {
+  display: flex;
+  /* flex-direction: row; */
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
 }
 
+#animoji {
+  max-height: 80%;
+  border-radius: 40%;
+  margin: 5px;
+}
+
+#header-text {
+  /* display: flex; */
+  /* border: solid 2px red; */
+  margin: 5px 20px 5px;
+  padding: 10px;
+}
+
+.header-text > h1 {
+  font-size: 3rem;
+}
+
+.header-text > h2 {
+  font-size: 1.5rem;
+}
+
+
+
+/* Navigation sidebar formatting */
+
+#navigation {
+  padding-left: 10px;
+  display: flex;
+  /* flex-direction: row; */
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  /* for column flex start align's to left */
+  align-items: flex-start;
+  font-size: inherit;
+  color: var(--grey-lighter, lightgrey);
+}
+
+#navlinks {
+  padding: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: inherit;
+}
+
+#navlinks a {
+  padding-top: 10px;
+  font-size: 2.5rem;
+  color: var(--grey-darker, lightslategrey);
+}
+
+#navlinks a:hover {
+  color: #1FF8F8;
+}
+
+
+#navsocial {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: inherit;
+}
+
+#navsocial img {
+  width: 90px;
+  padding:10px;
+}
+
+#navsocial a:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 8px 8px rgba(0,0,0,0.23);
+  border-radius: 35%;
+  background-color: var(--grey-lighter, lightgrey);
+  color: #1FF8F8;
+}
 
 
 
 
 
 /* Base CSS Grid for main page  */
+
 .container1 {
   font-size: 3.5rem;
   line-height: 1;
@@ -64,8 +149,8 @@ p {
   background: LightGray;
   display: grid;
   /* flexible sizes ...use auto or fr units?? */
-  grid-template-rows: 180px auto 100px;
-  grid-template-columns: 300px auto;
+  grid-template-rows: 280px auto 100px;
+  grid-template-columns: 250px auto;
   /* grid-gap: 10px; */
   /* move to separate css later */
   grid-template-areas:
@@ -74,6 +159,7 @@ p {
     "ft ft";
 }
 
+/* area is the class for elements for the first grid division */
 .area {
   padding: 10px;
   font-size: inherit;
@@ -105,9 +191,7 @@ p {
 
 
 
-
 /* CSS for Grid Subdivision for content / cards */
-
 
 .container2 {
   font-size: inherit;
@@ -149,6 +233,7 @@ p {
 }
 
 
+
 /* CSS for Main page Cards */
 
 .card {
@@ -162,7 +247,6 @@ p {
   box-shadow: 0 2px 4px rgba(0,0,0,0.19), 0 1px 1px rgba(0,0,0,0.23);
   /* card zoom effect */
   transition: 0.4s;
-
 }
 
 .card-image {
@@ -173,18 +257,6 @@ p {
   object-fit: cover;
   /* opacity ... change to 1 on hover */
   opacity: 0.65;
-}
-
-
-/* Hover styling for cards */
-
-.card:hover {
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 8px 8px rgba(0,0,0,0.23);
-  .card
-}
-
-.card:hover > .card-image {
-  opacity: 1;
 }
 
 #card1 {
@@ -201,4 +273,16 @@ p {
 
 #card4 {
   grid-area: c4;
+}
+
+
+
+/* Hover styling for cards */
+
+.card:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 8px 8px rgba(0,0,0,0.23);
+}
+
+.card:hover > .card-image {
+  opacity: 1;
 }
