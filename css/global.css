@@ -43,6 +43,15 @@ p {
 }
 
 
+.animoji {
+  max-height: 90%;
+  border-radius: 50%;
+
+}
+
+
+
+
 
 
 /* Base CSS Grid for main page  */
@@ -55,8 +64,8 @@ p {
   background: LightGray;
   display: grid;
   /* flexible sizes ...use auto or fr units?? */
-  grid-template-rows: 150px auto 100px;
-  grid-template-columns: 400px auto;
+  grid-template-rows: 180px auto 100px;
+  grid-template-columns: 300px auto;
   /* grid-gap: 10px; */
   /* move to separate css later */
   grid-template-areas:
@@ -110,7 +119,7 @@ p {
 
   grid-template-rows: 300px auto 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
+  grid-gap: 12px;
   /* move to separate css later */
   grid-template-areas:
     "intro intro"
