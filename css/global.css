@@ -11,7 +11,7 @@
   /* Lighter colour for 'card' elements */
   --grey-lightest: #D0DAFB;
   /* Hover colour for links */
-  --hover: #10ECEC;
+  --hover: #14D0D0;
   /* Font colour default */
   --font: #363709;
 }
@@ -245,7 +245,7 @@ p {
   background: inherit;
   display: grid;
 
-  grid-template-rows: auto§ auto 1fr 1fr;
+  grid-template-rows: auto auto 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   grid-gap: 12px;
   /* move to separate css later */
@@ -254,6 +254,21 @@ p {
     "ch ch"
     "c1 c2"
     "c3 c4";
+}
+#card1 {
+  grid-area: c1;
+}
+
+#card2 {
+  grid-area: c2;
+}
+
+#card3 {
+  grid-area: c3;
+}
+
+#card4 {
+  grid-area: c4;
 }
 
 
@@ -328,28 +343,14 @@ p {
 .card-image {
   width: 100%;
   border-radius: 8px;
-  height: 300px;
+  height: 375px;
   /* Crops image to ensure consistent image height between all cards */
   object-fit: cover;
   /* opacity ... change to 1 on hover */
   opacity: 0.65;
 }
 
-#card1 {
-  grid-area: c1;
-}
 
-#card2 {
-  grid-area: c2;
-}
-
-#card3 {
-  grid-area: c3;
-}
-
-#card4 {
-  grid-area: c4;
-}
 
 
 
@@ -361,4 +362,38 @@ p {
 
 .card:hover > .card-image {
   opacity: 1;
+}
+
+
+
+
+
+
+
+
+/* Blog post grids */
+
+#blog-grids {
+
+  font-size: inherit;
+  width: 100%;
+  background: inherit;
+  display: grid;
+
+  grid-template-rows: auto auto;
+  /* grid-template-columns: 1fr 1fr; */
+  grid-gap: 12px;
+  grid-template-areas:
+    "bl-c"
+    "bl-a";
+}
+
+#blog-content {
+  grid-area: bl-c;
+  border: 2px solid red;
+}
+
+#blog-author {
+  grid-area: bl-a;
+  border: 2px solid red;
 }
