@@ -390,10 +390,56 @@ p {
 
 #blog-content {
   grid-area: bl-c;
-  border: 2px solid red;
+  /* border: 2px solid red; */
+  padding 10px;
 }
 
 #blog-author {
   grid-area: bl-a;
   border: 2px solid red;
 }
+
+
+
+
+
+#blog-content  h3 {
+  font-size: 6rem;
+  padding: 5px 0 5px;
+}
+
+#blog-content  h4 {
+  font-size: 3rem;
+  padding: 5px 0 5px;
+}
+
+#blog-content p, li, figcaption {
+  font-size: 2.5rem;
+  padding-bottom: 5px;
+  /* color:red; */
+}
+
+#bl-img-caption {
+  text-align: center;
+}
+
+#bl-img-div {
+  /* background-color: #C5CFEF; */
+  background-color: inherit;
+  width: 100%;
+  margin: 0;
+  padding: 20px 0;
+}
+
+#bl-image {
+  max-width: 70%;
+  height:auto;
+  display: block;
+  margin: 0 auto 15px;
+}
+
+
+/* a:hover {
+  color: var(--hover, cyan);
+  font-style: italic;
+} */
