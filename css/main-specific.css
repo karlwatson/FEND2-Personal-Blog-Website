@@ -1,0 +1,128 @@
+/* CSS for Grid Subdivision for Main page content / cards */
+
+.container2 {
+  font-size: inherit;
+  /* color: red; */
+  /* min-height: 300px; */
+  width: 100%;
+  background: inherit;
+  display: grid;
+
+  grid-template-rows: auto auto 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 12px;
+  /* move to separate css later */
+  grid-template-areas:
+    "intro intro"
+    "ch ch"
+    "c1 c2"
+    "c3 c4";
+}
+#card1 {
+  grid-area: c1;
+}
+
+#card2 {
+  grid-area: c2;
+}
+
+#card3 {
+  grid-area: c3;
+}
+
+#card4 {
+  grid-area: c4;
+}
+
+
+
+/* Content  formatting */
+
+#intro {
+  background: inherit;
+  grid-area: intro;
+  /* for seeing css grid elements' placement */
+  /* border: solid 2px green; */
+  padding: 6px;
+  font-size: inherit;
+}
+
+#intro > p {
+  font-size: 2.5rem;
+}
+
+#intro a:hover {
+  color: var(--hover, cyan);
+  font-style: italic;
+}
+
+#cardheader {
+  text-align: center;
+  background-color: var(--grey-lightest, ghostwhite);
+  /* background-color: #AAB3CF; */
+  grid-area: ch;
+  padding: inherit;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.19), 0 1px 1px rgba(0,0,0,0.23);
+}
+
+
+
+/* CSS for Main page Cards */
+
+.card {
+  background-color: var(--grey-lightest, ghostwhite);
+  min-height: 200px;
+  /* for seeing css grid elements' placement */
+  /* border: solid 2px green; */
+  margin: 2px;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.19), 0 1px 1px rgba(0,0,0,0.23);
+  /* card zoom effect */
+  transition: 0.4s;
+  font-size: inherit;
+}
+
+.card button {
+  background-color: var(--grey-lightest, ghostwhite);
+  color: var(--font, black);
+  /* color: var(--grey-darker, lightslategrey); */
+  font-size: 2.5rem;
+  border: 3px solid var(--grey-blue, lightslategrey);
+  border-radius: 6px;
+  margin: 2px 0px 10px 0px;
+  margin-left: 0;
+  padding: 5px;
+}
+
+.card button:hover {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.19), 0 1px 1px rgba(0,0,0,0.23);
+  border: 3px solid var(--hover, cyan);
+}
+
+.card-image {
+  width: 100%;
+  border-radius: 8px;
+  height: 375px;
+  /* Crops image to ensure consistent image height between all cards */
+  object-fit: cover;
+  /* opacity ... change to 1 on hover */
+  opacity: 0.65;
+}
+
+
+
+
+
+/* Hover styling for cards */
+
+.card:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 8px 8px rgba(0,0,0,0.23);
+}
+
+.card:hover > .card-image {
+  opacity: 1;
+}
