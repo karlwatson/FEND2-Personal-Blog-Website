@@ -40,7 +40,7 @@ body {
 
 h4, h3 {
   font-size: 3rem;
-  margin: 2px;
+  margin: 0px;
 }
 
 p {
@@ -118,12 +118,8 @@ p {
   color: var(--grey-lighter, lightgrey);
 }
 
-.navigation h3 {
-  padding: 6px;
-}
-
 .navlinks {
-  padding: 10px;
+  padding: 20px 10px 10px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -140,7 +136,6 @@ p {
 .navlinks a:hover {
   color: var(--hover, cyan);
   font-style: italic;
-  /* color: #1FF8F8; */
 }
 
 .navsocial {
@@ -167,7 +162,6 @@ p {
   border-radius: 35%;
   background-color: var(--grey-lighter, lightgrey);
   color: var(--hover, cyan);
-  /* color: #1FF8F8; */
 }
 
 
@@ -185,11 +179,11 @@ p {
   width: 100%;
   background: LightGray;
   display: grid;
-  /* flexible sizes ...use auto or fr units?? */
+
   grid-template-rows: 280px auto 100px;
   grid-template-columns: 250px auto;
   /* grid-gap: 10px; */
-  /* move to separate css later */
+
   grid-template-areas:
     "hd hd"
     "nav ct"

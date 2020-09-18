@@ -2,4 +2,7 @@
 @import 'shared.css';
 /* CSS specific to the main page */
 @import 'blogpost-specific.css';
-/* CSS for Media Queries for the main page */
+/* First Media breakpoint  */
+@import "shared-media.css" screen and (max-width: 1000px);
+/* Second Media breakpoint  */
+@import "media-mobile-blogpost.css" screen and (max-width: 800px);

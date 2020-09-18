@@ -1,0 +1,9 @@
+/* Scale down global font sizes */
+
+html {
+  font-size: 7px;
+}
+
+.flip {
+  height: 120px;
+  width: 450px;

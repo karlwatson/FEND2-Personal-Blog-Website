@@ -1,0 +1,67 @@
+/* Scale down global font sizes */
+
+html {
+  font-size: 7.5px;
+}
+
+/* Reflows the global grid layout into one column
+Nav bar moves from the left to below content / above footer */
+
+.container1 {
+  font-size: 3.5rem;
+  line-height: 1;
+  /* color: red; */
+  min-height: 300px;
+  width: 100%;
+  background: LightGray;
+  display: grid;
+
+  grid-template-rows: 280px auto 200px 100px;
+  grid-template-columns: auto;
+  /* grid-gap: 10px; */
+
+  grid-template-areas:
+    "hd"
+    "ct"
+    "nav"
+    "ft";
+}
+
+/* Navigation bar re-formatting */
+
+.navigation h4, .navigation h3 {
+  font-size: 2.8rem;
+}
+
+.navigation a {
+  font-size: 2.4rem;
+}
+
+.navigation {
+  padding-left: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.navlinks {
+  padding: 5px;
+  width: 40%;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.navsocial {
+  width: 60%;
+  padding: 5px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.navsocial h4 {
+  width: 100%;
+}
+
+.navsocial img {
+  width: 60px;
+  padding: 5px;
+}

@@ -1,0 +1,50 @@
+/* Scale down global font sizes */
+
+html {
+  font-size: 7px;
+}
+
+
+/* CSS for Grid Subdivision for Main page content / cards */
+
+.container2 {
+  font-size: inherit;
+
+  width: 100%;
+  background: inherit;
+  display: grid;
+
+  grid-template-rows: auto auto 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-gap: 12px;
+  /* move to separate css later */
+  grid-template-areas:
+    "intro"
+    "ch"
+    "c1"
+    "c2"
+    "c3"
+    "c4";
+}
+
+.card {
+  /* max-width: 100%; */
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.card-image {
+  max-width: 100%;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+
+  height: 220px;
+}
+
+
+.card button {
+  font-size: 1.8rem;
+}
