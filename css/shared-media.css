@@ -55,10 +55,12 @@ Nav bar moves from the left to below content / above footer */
   padding: 5px;
   display: flex;
   flex-flow: row wrap;
+  justify-content: flex-end;
 }
 
 .navsocial h4 {
   width: 100%;
+  text-align: right;  
 }
 
 .navsocial img {

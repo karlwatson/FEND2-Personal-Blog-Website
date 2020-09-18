@@ -5,6 +5,7 @@ html {
 }
 
 
+
 /* CSS for Grid Subdivision for Main page content / cards */
 
 .container2 {
@@ -15,7 +16,7 @@ html {
   display: grid;
 
   grid-template-rows: auto auto 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr;
+  grid-template-columns: auto;
   grid-gap: 12px;
   /* move to separate css later */
   grid-template-areas:
@@ -33,6 +34,7 @@ html {
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
+  height:auto;
 }
 
 .card-image {
