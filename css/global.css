@@ -107,7 +107,7 @@ p {
 /* Navigation sidebar formatting */
 
 .navigation {
-  padding-left: 10px;
+  padding-left: 20px;
   display: flex;
   /* flex-direction: row; */
   flex-flow: column nowrap;
