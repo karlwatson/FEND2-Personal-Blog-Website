@@ -18,7 +18,7 @@
 #blog-content {
   grid-area: bl-c;
   /* border: 2px solid red; */
-  padding 10px;
+  padding: 10px;
 }
 
 #blog-author {
@@ -78,6 +78,14 @@
 #bl-container a:hover {
   color: var(--hover, cyan);
   font-style: italic;
+}
+
+
+
+/* Blockquote css */
+.bl-quote {
+  font-size: 2.5rem;
+  color: var(--grey-darker, lightslategrey);
 }
 
 
