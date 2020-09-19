@@ -6,3 +6,5 @@
 @import "shared-media.css" screen and (max-width: 1100px);
 /* Second Media breakpoint  */
 @import "media-mobile-main.css" screen and (max-width: 800px);
+/* Third Media breakpoint - resize elements common across main page and blog  */
+@import "shared-media-smallest-screens.css" screen and (max-width: 600px);
